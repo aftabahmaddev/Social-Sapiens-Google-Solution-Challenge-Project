@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{%  load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'register.css' %}">
+{% endblock %}
+
+    {% block content %}
+     
+    <form id="sign_form" method="POST" action=" ">
+      {% csrf_token %}
+      <h1>Create Your Account</h1>
+        {% if messages %}
+        {% for message in messages %}
+      <div class="alert alert-danger" role="alert">
+        {{message}}
+        
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% if form1.errors %}
+    {% for field in form1 %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form1.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+      
+      
+      
+<div id="fieldsets">
+  <h2 class="fs-title">Upload Images and videos</h2>
+  <div class="form-group" >
+    <label class="label col-md-4" for="email">Images</label>
+    {{form.img1}}
+    {{form.img2}} {{form.img3}} 
+    {{form.img4}} {{form.img5}} 
+  </div>
+  <div class="form-group">
+    <label class="label col-md-4" for="email">Videos:</label>
+    {{form.video}}
+  </div>
+  
+  <div id="fieldsets">
+    <h2 class="fs-title">Location</h2>
+    <div class="form-group" >
+      <label class="label col-md-4" for="f-name">province:</label>
+      {{form.province}} 
+    </div>
+    <div class="form-group" >
+    <label class="label col-md-4" for="l-name">city:</label>
+    {{form.city}} 
+  </div>
+  
+  <div class="form-group" >
+    <label class="label col-md-4" for="cars">address:</label>
+    {{form.address}} 
+  </div>
+       
+  
+</div>
+
+</div>
+      <div id="fieldsets">
+          <h2 class="fs-title">Tell us what it is</h2>
+          <div class="form-group" >
+            <label class="label col-md-4" for="email">Name:</label>
+            {{form.name}} 
+          </div>
+          <div class="form-group" >
+            <label class="label col-md-4" for="email">More about it?:</label>
+            {{form.des}} 
+          </div>
+          
+      
+    </div>
+
+    <div id="fieldsets">
+        <h2 class="fs-title">Give us Contact Details</h2>
+        <div class="form-group" >
+          <label class="label col-md-4" for="f-name">email:</label>
+          {{form.email}} 
+        </div>
+        <div class="form-group" >
+        <label class="label col-md-4" for="l-name">Phone 1:</label>
+        {{form.phone}} 
+      </div>
+      
+      <div class="form-group" >
+        <label class="label col-md-4" for="cars">Phone 2:</label>
+        {{form.phone2}} 
+      </div>
+           
+      
+    </div>
+ 
+      <div id="fieldsets">
+          <h2 class="fs-title">Finantial Help</h2>
+          <div class="form-group" >
+            <h4>Account details</h4>
+          <label class="label col-md-4" for="b-type">How can we help them with Money?</label>
+          {{form.about_payment}} 
+        </div>
+          
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+        <input type="submit"  name="Submit " class="action-button"  value="Submit Case" />
+    </form>
+    
+  {% endblock %}
+  {% block js %}
+  <script src="{% static '/js/register/register.js' %}"></script>
+    {% endblock %}

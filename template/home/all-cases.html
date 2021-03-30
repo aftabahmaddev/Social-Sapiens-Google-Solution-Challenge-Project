@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<section id="gallery">
+    <div class="container">
+
+      <div class="row">
+          {% for post in post %}
+      <div class="col-lg-4 mb-4">
+      <div class="card">
+        <img src="{{ MEDIA_URL }}{{post.img1.url}}" alt="" class="card-img-top">
+        <p>City: {{post.city}}</p>
+        <div class="card-body">
+          <h5 class="card-title">{{post.name}}</h5>
+          <p class="card-text">{{post.des}}</p>
+         <a href="{% url 'case_details' post.name %}" class="btn btn-outline-success btn-sm">Details</a>
+        </div>
+       </div>
+      </div>
+      {% endfor %}
+    
+    </div>
+  </div>
+  </section>
+    {% endblock %}

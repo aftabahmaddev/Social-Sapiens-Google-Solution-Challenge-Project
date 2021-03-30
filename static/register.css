@@ -1,0 +1,113 @@
+/* Sign up start */
+#sign_form{
+    width: 70%;
+    margin: 50px auto;
+	text-align: center;
+	position: relative;
+}
+#sign_form #fieldset {
+	border: 0 none;
+	border-radius: 3px;
+	padding: 20px auto;
+	box-sizing: border-box;
+    width: 80%;
+	margin: 0 10%;
+	position: relative;
+}
+#sign_form #fieldset:not(:first-of-type) {
+	display: none;
+}
+#sign_form input,#sign_form select, #sign_form textarea {
+	padding: 20px;
+	border-radius: 3px;
+	border-style: none;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+    font-family: montserrat;
+    background-color: #f0f5f5;
+	font-size: 15px;
+}
+#sign_form .action-button {
+	width: 100px;
+	background: #5a5cdd;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#progressbar {
+    overflow: hidden;
+    padding: 10px 0px 10px 130px;
+	counter-reset: step;
+}
+#progressbar li {
+    padding-top: 10px;
+	list-style-type: none;
+	color: black;
+	text-transform: uppercase;
+    font-size: 9px;
+	width: 20%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #5a5cdd;
+	color: white;
+}
+
+.fs-title {
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666666;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 850px) {
+    #sign_form #fieldset {
+        border-radius: 3px;
+        padding: 20px 0px;
+        margin: 0 auto;
+        position: relative;
+    }
+    #sign_form{
+        width: 100%;
+        margin: 20px 0px;
+    }
+    #progressbar {
+        padding: 10px 0px 10px 50px;
+    }
+}
+@media (max-width: 1000px) {
+    #progressbar {
+        padding: 10px 0px 10px 100px;
+    }
+}
+@media (max-width: 750px) {
+    #progressbar {
+        padding: 10px 0px 10px 20px;
+    }
+}
+/* sign up end */

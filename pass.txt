@@ -1,0 +1,11 @@
+'-i(pdyi*j+j2n*&2h9=r)lkr@v-)yq5xibt7%gx4ppb_6cp1m2'
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dxorygvq',
+        'USER': 'dxorygvq',
+        'PASSWORD': 'k0xK5EnBVGtM8ASndMuuHvKONHMClDS7',
+        'HOST': 'tuffi.db.elephantsql.com',
+        'PORT': '5432',
+    }
+}
