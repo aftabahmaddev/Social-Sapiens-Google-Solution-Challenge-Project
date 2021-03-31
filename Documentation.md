@@ -1,3 +1,4 @@
+
 <h1>Documentation for Social Sapiens</h1>
 
 <p>Social sapiens is a charity app developed for the welfare of unprivileged people. The downtrodden people will be able to register for the app and organizations including educational institutes, and other people from any part of the country. People wanted to help in any area will be welcomed to see the registered cases and on their desire will solve the case by donation as much as they want. The helper can verify the case by contacting to given address and thus it will be trustworthy to avail this app for pure assistance.</p>
@@ -23,5 +24,7 @@ In our advanced application we will be collaborating with higher authorities , o
  </p>
 <h2>Mobile App Sceenshots</h2>
 
-
-
+![app-1](https://user-images.githubusercontent.com/56789675/113179785-6ba30800-9269-11eb-9da8-c3d07e8acc3a.jpeg)
+![app-2](https://user-images.githubusercontent.com/56789675/113179793-6d6ccb80-9269-11eb-8e80-39cbf295bd2d.jpeg)
+![app-3](https://user-images.githubusercontent.com/56789675/113179796-6e056200-9269-11eb-9768-b4330f9ae007.jpeg)
+![app-4](https://user-images.githubusercontent.com/56789675/113179797-6e9df880-9269-11eb-8cee-8bb06fa9c0a6.jpeg)
